@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace SnakeOOP
 {
@@ -18,13 +19,15 @@ namespace SnakeOOP
             mapHeight = _mapHeight;
             symb = _symb;
         }
-
+        
         public Point GenerateFood()
         {
             int x = rnd.Next(2, mapWidth - 2);
             int y = rnd.Next(2, mapHeight - 2);
+            Console.ForegroundColor = ConsoleColor.Red;
             return new Point(x, y, symb);
-
+            
         }
+        
     }
 }

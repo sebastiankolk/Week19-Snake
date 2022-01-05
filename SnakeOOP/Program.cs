@@ -50,6 +50,7 @@ namespace SnakeOOP
             string str_score = Convert.ToString(score);
             WriteGameOver(str_score);
             Console.ReadLine();
+            
         }
 
         public static void WriteGameOver(string score)

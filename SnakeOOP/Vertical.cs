@@ -14,6 +14,7 @@ namespace SnakeOOP
                 Point p = new Point(x, i, symb);
                 pointList.Add(p);
             }
+
         }
 
     }
