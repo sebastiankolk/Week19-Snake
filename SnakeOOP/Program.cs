@@ -8,8 +8,8 @@ namespace SnakeOOP
     {
         static void Main(string[] args)
         {
+            int x = 300;
             int score = 0;
-            //drawing a game field frame
             Walls walls = new Walls(80, 25);
             walls.Draw();
 
@@ -33,6 +33,7 @@ namespace SnakeOOP
                     food = foodGenerator.GenerateFood();
                     food.Draw();
                     score++;
+                    x = x -10;
                 }
                 else
                 {
@@ -44,13 +45,14 @@ namespace SnakeOOP
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKeys(key.Key);
                 }
-                Thread.Sleep(300);
+                Thread.Sleep(x);
 
             }
             string str_score = Convert.ToString(score);
             WriteGameOver(str_score);
             Console.ReadLine();
-            
+
+
         }
 
         public static void WriteGameOver(string score)

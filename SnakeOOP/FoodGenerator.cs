@@ -25,6 +25,7 @@ namespace SnakeOOP
             int x = rnd.Next(2, mapWidth - 2);
             int y = rnd.Next(2, mapHeight - 2);
             Console.ForegroundColor = ConsoleColor.Red;
+            Console.Beep();
             return new Point(x, y, symb);
             
         }
